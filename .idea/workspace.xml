@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Advertiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Advertiser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/EstateAgency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/EstateAgency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/PrivateOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/PrivateOwner.java" afterDir="false" />
     </list>
+    <list id="48bbce6c-f5ba-407e-8eab-0e420c36f9e3" name="Changes by sofia" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
