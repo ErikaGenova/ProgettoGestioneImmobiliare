@@ -191,14 +191,14 @@ public class SQLiteDAO implements DAO {
     }
 
     @Override
-    public void deleteAdvertiser(String idAdvertiser) {
+    public void deleteAdvertiser(int idAdvertiser) {
         try {
             Connection connection = Database.getConnection();
 
             String deleteQuery = "DELETE FROM advertisers WHERE id = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery);
-            preparedStatement.setString(1, idAdvertiser);
+            preparedStatement.setInt(1, idAdvertiser);
 
             preparedStatement.executeUpdate();
 
@@ -708,14 +708,14 @@ public class SQLiteDAO implements DAO {
     }
 
     @Override
-    public Booking[] getBookingsByAdvertiser(String idAdvertiser) {
+    public Booking[] getBookingsByAdvertiser(int idAdvertiser) {
         //get bookings by advertiser
         List<Booking> bookingList = new ArrayList<>();
         try {
             Connection connection = Database.getConnection();
             String selectQuery = "SELECT * FROM bookings INNER JOIN ads ON bookings.id_ad = ads.id WHERE advertiser_id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
-            preparedStatement.setString(1, idAdvertiser);
+            preparedStatement.setInt(1, idAdvertiser);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Booking booking = extractBookingFromResultSet(resultSet);

@@ -20,7 +20,7 @@ public interface DAO {
 
     void deleteAd(Integer idAd);
     void deleteClient(String fiscalCode);
-    void deleteAdvertiser(String idAdvertiser);
+    void deleteAdvertiser(int idAdvertiser);
     void deleteBooking(int idBooking);
     void deleteFavorite(String fiscalCode, int idAd);
 
@@ -44,7 +44,7 @@ public interface DAO {
     Ad[] getFavoriteAds(String fiscalCode);
     Ad[] getAdsByAdvertiser(String idAdvertiser);
     Booking[] getBookingsByAd(int idAd);
-    Booking[] getBookingsByAdvertiser(String idAdvertiser);
+    Booking[] getBookingsByAdvertiser(int idAdvertiser);
 
     public int getNextAdID() throws Exception;
     public int getNextAdvertiserID() throws Exception;
