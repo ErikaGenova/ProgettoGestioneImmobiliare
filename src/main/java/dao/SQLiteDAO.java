@@ -651,6 +651,38 @@ public class SQLiteDAO implements DAO {
     }
 
     @Override
+    public Client[] getFavoritesByAd(int idAd){
+        List<Client> adSavedBy = new ArrayList<>();
+
+        try {
+            Connection connection = Database.getConnection();
+
+            //TODO: controllare query
+            String selectQuery = "SELECT clients.* FROM favorites " +
+                    "INNER JOIN clients ON favorites.id_client = clients.fiscal_code " +
+                    "WHERE id_ad = ?";
+
+            PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
+            preparedStatement.setInt(1, idAd);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                Client client = extractClientFromResultSet(resultSet);
+                adSavedBy.add(client);
+            }
+
+            preparedStatement.close();
+            Database.closeConnection(connection);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return adSavedBy.toArray(new Client[0]);
+
+    }
+
+    @Override
     public Ad[] getAdsByAdvertiser(String idAdvertiser) {
         List<Ad> adList = new ArrayList<>();
 

@@ -1,11 +1,15 @@
 package domainModel;
 
 
-public class Client {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Client{
     private final String fiscalCode;
     private String name;
     private String lastName;
     private int budget;
+
 
     public Client(String fiscalCode, String name, String lastName, int budget) {
         this.fiscalCode = fiscalCode;
@@ -14,7 +18,7 @@ public class Client {
         this.budget = budget;
     }
 
-     public String getFiscalCode() {
+    public String getFiscalCode() {
         return fiscalCode;
     }
 
@@ -52,4 +56,6 @@ public class Client {
                 ", budget=" + budget +
                 '}';
     }
+
+
 }

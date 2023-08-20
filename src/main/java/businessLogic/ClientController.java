@@ -1,13 +1,19 @@
 package businessLogic;
 
 import dao.DAO;
+import domainModel.Ad;
 import domainModel.Client;
 
-public class ClientController {
-    private DAO dao;
+import java.util.List;
 
-    public ClientController(DAO dao) {
+public class ClientController implements Observer{
+    private DAO dao;
+    AdController adController;
+
+    public ClientController(DAO dao, AdController adController) {
         this.dao = dao;
+        this.adController = adController;
+        adController.addObserver(this);
     }
 
     public void addClient(String name, String lastName, String fiscalCode, int budget) {
@@ -21,6 +27,7 @@ public class ClientController {
             // Insert the new client into the database
             dao.insertClient(newClient);
         }
+
     }
 
     public void removeClient(String fiscalCode) {
@@ -28,4 +35,13 @@ public class ClientController {
         dao.deleteClient(fiscalCode);
         System.out.println("Cliente rimosso");
     }
+
+    public void update(Ad ad){
+        Client[] clients = dao.getFavoritesByAd(ad.getId());
+
+        for(Client client : clients){
+            System.out.println("L'annuncio " + ad.getTitle() + " è stato rimosso e tu lo avevi tra i preferiti, " + client.getName() + "!");
+        }
+    }
+
 }

@@ -1,14 +1,18 @@
 package businessLogic;
 
 import dao.DAO;
-import domainModel.Ad;
-import domainModel.Advertiser;
-import domainModel.Client;
+import domainModel.*;
 import domainModel.search.*;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class AdController {
+
+public class AdController implements Subject {
     private DAO dao;
+
+    private List<Observer> observers = new ArrayList<>();//lista observers
+
 
     public AdController(DAO dao) {
         this.dao = dao;
@@ -53,7 +57,10 @@ public class AdController {
 
     public void deleteAd(int id) {
         // Implement the logic to delete an ad from the database
+        Ad adToDelete = dao.getAd(id);
+        notifyObservers(adToDelete);
         dao.deleteAd(id);
+
     }
 
     public void modifyPrice(Ad ad, int price) {
@@ -113,5 +120,20 @@ public class AdController {
         // Implement the logic to remove an ad from the client's favorites
         dao.deleteFavorite(idClient, idAd);
         System.out.println("Annuncio rimosso dai preferiti");
+    }
+
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+        //TODO:Come si gestisce la rimozione del clientController dalla lista degli osservatori
+    }
+
+    public void notifyObservers(Ad ad) {
+        for (Observer observer : observers) {
+            observer.update(ad);
+        }
     }
 }

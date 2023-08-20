@@ -1,5 +1,7 @@
 package domainModel;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Ad {
@@ -12,6 +14,7 @@ public class Ad {
     private int sqrmt;
     private boolean sell;
     private final int advertiserId;
+
 
     // Costruttore
     public Ad(int id, String title, String description, String address, String city, int price, int sqrmt, boolean sell, int advertiserId) {
@@ -106,4 +109,6 @@ public class Ad {
                 ", advertiser=" + advertiserId +
                 '}';
     } //TODO: aggiustiamo la stampa
+
+
 }

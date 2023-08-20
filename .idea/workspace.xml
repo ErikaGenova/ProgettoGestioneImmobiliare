@@ -7,8 +7,15 @@
     <list default="true" id="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Client.java" afterDir="false" />
     </list>
-    <list id="48bbce6c-f5ba-407e-8eab-0e420c36f9e3" name="Changes by sofia" comment="" />
+    <list id="48bbce6c-f5ba-407e-8eab-0e420c36f9e3" name="Changes by sofia" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,13 +27,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="5" end1="6" start2="6" end2="9" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="7" end1="7" start2="10" end2="11" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="8" end1="9" start2="12" end2="13" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="10" end1="10" start2="14" end2="16" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="23" end1="23" start2="29" end2="30" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="30" end1="30" start2="37" end2="46" changelist="48bbce6c-f5ba-407e-8eab-0e420c36f9e3" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
