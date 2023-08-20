@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" afterDir="false" />
     </list>
-    <list id="48bbce6c-f5ba-407e-8eab-0e420c36f9e3" name="Changes by sofia" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DAO.java" afterDir="false" />
-    </list>
+    <list id="48bbce6c-f5ba-407e-8eab-0e420c36f9e3" name="Changes by sofia" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>

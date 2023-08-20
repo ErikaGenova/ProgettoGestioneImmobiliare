@@ -4,6 +4,7 @@ import dao.DAO;
 import domainModel.Ad;
 import domainModel.Advertiser;
 import domainModel.Client;
+import domainModel.search.*;
 
 
 public class AdController {
@@ -32,10 +33,10 @@ public class AdController {
         return false;
     }
 
-    //TODO: dobbiamo fare il package search!!
-//    public void searchAd(Search search) {
-//        // Implement the logic to search for ads based on the Search object
-//    }
+    public Ad[] searchAd(Search s) {
+        return s.searchAd();
+    }
+
 
     public Ad createAd(String title, String description, String address, String city, int price, int sqrmt, boolean sell, int advertiserId) throws Exception {
         // Implement the logic to create a new ad and save it to the database
