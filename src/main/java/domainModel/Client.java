@@ -14,7 +14,7 @@ public class Client {
         this.budget = budget;
     }
 
-    public String getFiscalCode() {
+     public String getFiscalCode() {
         return fiscalCode;
     }
 

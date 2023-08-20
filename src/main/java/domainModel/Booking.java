@@ -10,12 +10,12 @@ public class Booking {
     private final int idAd;
     private final String idClient;
 
-    public Booking(int id, LocalDate date, LocalTime time, Ad ad, Client client) {
+    public Booking(int id, LocalDate date, LocalTime time, int adId, String clientFiscalCode) {
         this.id = id;
         this.date = date;
         this.time = time;
-        this.idAd = ad.getId();
-        this.idClient = client.getFiscalCode();
+        this.idAd = adId;
+        this.idClient = clientFiscalCode;
     }
 
     public int getId() {
@@ -28,6 +28,14 @@ public class Booking {
 
     public LocalTime getTime() {
         return time;
+    }
+
+    public int getAdId() {
+        return idAd;
+    }
+
+    public String getClientId() {
+        return idClient;
     }
 
     public void setDate(LocalDate date) {

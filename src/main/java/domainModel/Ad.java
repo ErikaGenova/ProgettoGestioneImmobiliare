@@ -11,10 +11,10 @@ public class Ad {
     private int price;
     private int sqrmt;
     private boolean sell;
-    private final String advertiserId;
+    private final int advertiserId;
 
     // Costruttore
-    public Ad(int id, String title, String description, String address, String city, int price, int sqrmt, boolean sell, Advertiser advertiser) {
+    public Ad(int id, String title, String description, String address, String city, int price, int sqrmt, boolean sell, int advertiserId) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -23,7 +23,7 @@ public class Ad {
         this.price = price;
         this.sqrmt = sqrmt;
         this.sell = sell;
-        this.advertiserId = advertiser.getId(); //TODO: ogni annuncio ha un inserzionista
+        this.advertiserId = advertiserId; //TODO: ogni annuncio ha un inserzionista
     }
 
     // Metodi getter
@@ -55,7 +55,7 @@ public class Ad {
         return sqrmt;
     }
 
-    public String getAdvertiserId() {
+    public int getAdvertiserId() {
         return advertiserId;
     }
 

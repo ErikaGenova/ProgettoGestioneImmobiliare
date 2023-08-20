@@ -6,7 +6,7 @@ public class EstateAgency extends Advertiser {
     private String name;
     private int agencyFee;
 
-    public EstateAgency(String id, int bankAccount, String name, int agencyFee) {
+    public EstateAgency(int id, int bankAccount, String name, int agencyFee) {
         super(id, bankAccount);
         this.name = name;
         this.agencyFee = agencyFee;

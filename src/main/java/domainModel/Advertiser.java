@@ -4,16 +4,16 @@ import java.util.Objects;
 
 
 public abstract class Advertiser {
-    private final String id;
+    private final int id;
     private int bankAccount;
 
 
-    public Advertiser(String id, int bankAccount) {
+    public Advertiser(int id, int bankAccount) {
         this.id = id;
         this.bankAccount = bankAccount;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 

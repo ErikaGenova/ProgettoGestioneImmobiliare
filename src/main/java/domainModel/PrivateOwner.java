@@ -5,7 +5,7 @@ public class PrivateOwner extends Advertiser {
     private String name;
     private String lastName;
 
-    public PrivateOwner(String id, int bankAccount, String name, String lastName) {
+    public PrivateOwner(int id, int bankAccount, String name, String lastName) {
         super(id, bankAccount);
         this.name = name;
         this.lastName = lastName;
