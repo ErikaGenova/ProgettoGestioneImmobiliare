@@ -10,6 +10,7 @@ import java.sql.*;
 
 public class Database {
     private static String dbName = "realestate.db";
+
     // Private constructor (Singleton pattern)
     private Database() {
     }
@@ -53,7 +54,7 @@ public class Database {
      * Initialize the database with the schema.sql file
      *
      * @return The number of rows affected
-     * @throws IOException If the schema.sql file is not found
+     * @throws IOException  If the schema.sql file is not found
      * @throws SQLException SQL query error
      */
     public static int initDatabase() throws IOException, SQLException {

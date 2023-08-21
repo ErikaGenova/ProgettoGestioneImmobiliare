@@ -13,7 +13,6 @@ public class AdController implements Subject {
 
     private List<Observer> observers = new ArrayList<>();//lista observers
 
-
     public AdController(DAO dao) {
         this.dao = dao;
     }
@@ -70,33 +69,58 @@ public class AdController implements Subject {
         System.out.println("Prezzo modificato in" + ad.getPrice());
     }
 
+    //TODO:GESTIRE AGECYFEE
     public void payAd(int idAd, String fiscalCode) {
         // Get the ad and the client from the DAO
         Ad ad = dao.getAd(idAd);
         Client client = dao.getClient(fiscalCode);
 
         if (ad != null && client != null) {
-            // Calculate the new budget for the client after deducting the ad price
-            int newClientBudget = client.getBudget() - ad.getPrice();
-            // Update the client's budget in the database
-            if (newClientBudget < 0) {
-                System.out.println("Non hai abbastanza soldi per pagare questo annuncio");
-            } else {
-                dao.updateClient(client, newClientBudget);
+            Advertiser advertiser = dao.getAdvertiser(ad.getAdvertiserId());
+            if (advertiser != null) {
+                {
+                    int newClientBudget = client.getBudget();
+                    if (advertiser instanceof EstateAgency) {
+                        EstateAgency agency = (EstateAgency) advertiser;
+                        System.out.println("Stai comprando da un'agenzia, verrà applicato un costo aggiuntivo di " + agency.getAgencyFee() + " euro");
+                        newClientBudget = newClientBudget - agency.getAgencyFee();
+                    }
+                    newClientBudget = newClientBudget - ad.getPrice();
+                    if (newClientBudget < 0) {
+                        System.out.println("Non hai abbastanza soldi per pagare questo annuncio");
+                        return;
+                    } else {
+                        dao.updateClient(client, newClientBudget);
 
-                // Get the advertiser associated with the ad
-                Advertiser advertiser = dao.getAdvertiser(ad.getAdvertiserId());
+                        // Calculate the new bank account balance for the advertiser after adding the ad price
+                        int newAdvertiserBankAccount = advertiser.getBankAccount() + ad.getPrice();
+                        if (advertiser instanceof EstateAgency) {
+                            EstateAgency agency = (EstateAgency) advertiser;
+                            newAdvertiserBankAccount= newAdvertiserBankAccount + agency.getAgencyFee();
+                        }
+                        // Update the advertiser's bank account in the database
+                        dao.updateAdvertiser(advertiser, newAdvertiserBankAccount);
 
-                if (advertiser != null) {
-                    // Calculate the new bank account balance for the advertiser after adding the ad price
-                    int newAdvertiserBankAccount = advertiser.getBankAccount() + ad.getPrice();
-                    // Update the advertiser's bank account in the database
-                    dao.updateAdvertiser(advertiser, newAdvertiserBankAccount);
+                        // Delete the ad from the database
+                        dao.deleteAd(idAd);
+                    }
+
                 }
 
-                // Delete the ad from the database
-                dao.deleteAd(idAd);
             }
+
+            // Calculate the new budget for the client after deducting the ad price
+
+            // Update the client's budget in the database
+
+        }
+    }
+
+    //funzione che stampa tutti gli ad nel sistema
+    public void printAllAds() {
+        Ad[] ads = dao.getAdAll();
+        for (Ad ad : ads) {
+            System.out.println(ad);
         }
     }
 
@@ -113,13 +137,13 @@ public class AdController implements Subject {
     public void addToFavourites(String idClient, int idAd) {
         // Implement the logic to add an ad to the client's favorites
         dao.insertFavorite(idClient, idAd);
-        System.out.println("Annuncio aggiunto ai preferiti");
+        System.out.println("l'annuncio " + idAd + " e' stato aggiunto ai preferiti!");
     }
 
     public void removeFromFavourites(String idClient, int idAd) {
         // Implement the logic to remove an ad from the client's favorites
         dao.deleteFavorite(idClient, idAd);
-        System.out.println("Annuncio rimosso dai preferiti");
+        System.out.println("l'annuncio " + idAd + " e' stato rimosso dai preferiti!");
     }
 
     public void addObserver(Observer observer) {

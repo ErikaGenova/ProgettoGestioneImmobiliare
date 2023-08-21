@@ -37,4 +37,5 @@ public class EstateAgency extends Advertiser {
         System.out.println("Name: " + name);
         System.out.println("Agency Fee: " + agencyFee);
     }
+
 }

@@ -8,6 +8,7 @@ public class EstateAgencyController extends AdvertiserController<EstateAgency> {
 
     public EstateAgencyController(DAO dao) {
         super(dao);
+        this.dao = dao;
     }
 
     public void addEstateAgency(int id, String name, int agencyFee) {
