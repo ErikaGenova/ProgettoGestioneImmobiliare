@@ -198,6 +198,7 @@ public class SQLiteDAO implements DAO {
             String deleteQuery = "DELETE FROM advertisers WHERE id = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery);
+
             preparedStatement.setInt(1, idAdvertiser);
 
             preparedStatement.executeUpdate();
@@ -683,7 +684,7 @@ public class SQLiteDAO implements DAO {
     }
 
     @Override
-    public Ad[] getAdsByAdvertiser(String idAdvertiser) {
+    public Ad[] getAdsByAdvertiser(int idAdvertiser) {
         List<Ad> adList = new ArrayList<>();
 
         try {
@@ -692,7 +693,7 @@ public class SQLiteDAO implements DAO {
             String selectQuery = "SELECT * FROM ads WHERE advertiser_id = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(selectQuery);
-            preparedStatement.setString(1, idAdvertiser);
+            preparedStatement.setInt(1, idAdvertiser);
 
             ResultSet resultSet = preparedStatement.executeQuery();
 

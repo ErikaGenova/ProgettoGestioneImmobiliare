@@ -69,7 +69,7 @@ public class AdController implements Subject {
         System.out.println("Prezzo modificato in" + ad.getPrice());
     }
 
-    //TODO:GESTIRE AGECYFEE
+
     public void payAd(int idAd, String fiscalCode) {
         // Get the ad and the client from the DAO
         Ad ad = dao.getAd(idAd);
@@ -82,15 +82,20 @@ public class AdController implements Subject {
                     int newClientBudget = client.getBudget();
                     if (advertiser instanceof EstateAgency) {
                         EstateAgency agency = (EstateAgency) advertiser;
-                        System.out.println("Stai comprando da un'agenzia, verrà applicato un costo aggiuntivo di " + agency.getAgencyFee() + " euro");
+                        System.out.println("Stai comprando da un'agenzia, verra' applicato un costo aggiuntivo di " + agency.getAgencyFee() + " euro");
                         newClientBudget = newClientBudget - agency.getAgencyFee();
                     }
                     newClientBudget = newClientBudget - ad.getPrice();
+
+
+
                     if (newClientBudget < 0) {
                         System.out.println("Non hai abbastanza soldi per pagare questo annuncio");
                         return;
                     } else {
                         dao.updateClient(client, newClientBudget);
+
+
 
                         // Calculate the new bank account balance for the advertiser after adding the ad price
                         int newAdvertiserBankAccount = advertiser.getBankAccount() + ad.getPrice();
@@ -124,7 +129,7 @@ public class AdController implements Subject {
         }
     }
 
-    public Ad[] getAdsForAdvertiser(String advertiserId) {
+    public Ad[] getAdsForAdvertiser(int advertiserId) {
         // Implement the logic to get all ads for a specific advertiser
         return dao.getAdsByAdvertiser(advertiserId);
     }

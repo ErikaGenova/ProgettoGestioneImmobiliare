@@ -9,7 +9,8 @@ import java.sql.*;
  */
 
 public class Database {
-    private static String dbName = "realestate.db";
+//    private static String dbName = "realestate.db";
+    private static String dbName = "main.db";
 
     // Private constructor (Singleton pattern)
     private Database() {

@@ -44,6 +44,15 @@ public class ClientController implements Observer{
         }
     }
 
+    public void updateClientBudget(String fiscalCode, int newBudget) {
+        // Get the client with the given fiscal code from the database
+        Client client = dao.getClient(fiscalCode);
+        // Update the client's budget
+        client.setBudget(newBudget);
+        // Update the client in the database
+        dao.updateClient(client, newBudget);
+    }
+
     public Client getClient(String fiscalCode) {
         // Get the client with the given fiscal code from the database
         return dao.getClient(fiscalCode);

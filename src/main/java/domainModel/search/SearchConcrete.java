@@ -14,6 +14,7 @@ import java.util.List;
 public class SearchConcrete implements Search {
     private String city;
 
+
     public SearchConcrete(String city) {
         this.city = city;
     }
@@ -60,4 +61,7 @@ public class SearchConcrete implements Search {
 
         return adsList.toArray(new Ad[0]);
     }
+
+
+
 }

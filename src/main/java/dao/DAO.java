@@ -63,7 +63,7 @@ public interface DAO {
 
     Client[] getFavoritesByAd(int idAd);
 
-    Ad[] getAdsByAdvertiser(String idAdvertiser);
+    Ad[] getAdsByAdvertiser(int idAdvertiser);
 
     Booking[] getBookingsByAd(int idAd);
 

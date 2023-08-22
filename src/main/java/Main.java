@@ -70,6 +70,7 @@ public class Main {
 
         //adController.printAllAds();
 
+        //Uso dei decoratori
         Ad[] adsSearched = adController.searchAd(new DecoratorSearchPrice(
                 new DecoratorSearchSqrmt(
                         new DecoratorSearchSell(
@@ -87,36 +88,38 @@ public class Main {
             System.out.println("\n");
         }
 
-        estateAgencyController.removeAdvertiser(1);
-        privateOwnerController.removeAdvertiser(2);
-        privateOwnerController.removeAdvertiser(5);
-
-        allAdvertisers = dao.getAdvertiserAll();
-        for (Advertiser advertiser : allAdvertisers) {
-            advertiser.displayInformation();
-            System.out.println("\n");
-        }
-
-        adController.deleteAd(5);
-        adController.printAllAds();
-
-        adController.addToFavourites("RSSMRA00A00A000A", 1);
-        adController.addToFavourites("RSSMRA00A00A000A", 7);
-        adController.addToFavourites("RSSMRA00A00A000A", 10);
-        adController.addToFavourites("VRDLGI00A00A000A", 15);
-        adController.addToFavourites("VRDLGI00A00A000A", 20);
-        adController.addToFavourites("GVNNBN00A00A000A", 2);
-        adController.addToFavourites("GVNNBN00A00A000A", 4);
-        adController.addToFavourites("GVNNBN00A00A000A", 6);
-
-        adController.getFavouriteAds("RSSMRA00A00A000A");
-
-        adController.deleteAd(10);
-
-        Client client = clientController.getClient("RSSMRA00A00A000A");
-        client.toString();
-        adController.payAd(1, "RSSMRA00A00A000A");
-        client.toString();
+//        estateAgencyController.removeAdvertiser(3);
+//        privateOwnerController.removeAdvertiser(2);
+//        privateOwnerController.removeAdvertiser(5);
+//
+//        allAdvertisers = dao.getAdvertiserAll();
+//        for (Advertiser advertiser : allAdvertisers) {
+//            advertiser.displayInformation();
+//            System.out.println("\n");
+//        }
+//
+//        adController.deleteAd(5);
+//        adController.printAllAds();
+//
+//        adController.addToFavourites("RSSMRA00A00A000A", 1);
+//        adController.addToFavourites("RSSMRA00A00A000A", 7);
+//        adController.addToFavourites("RSSMRA00A00A000A", 10);
+//        adController.addToFavourites("VRDLGI00A00A000A", 15);
+//        adController.addToFavourites("VRDLGI00A00A000A", 20);
+//        adController.addToFavourites("GVNNBN00A00A000A", 2);
+//        adController.addToFavourites("GVNNBN00A00A000A", 4);
+//        adController.addToFavourites("GVNNBN00A00A000A", 6);
+//
+//        //prova corretto funzionamento Observer
+//        adController.getFavouriteAds("RSSMRA00A00A000A");
+//        adController.deleteAd(10);
+//
+//
+//        //Funzione pay
+//        Client client = clientController.getClient("RSSMRA00A00A000A");
+//        System.out.println(client.toString());
+//        adController.payAd(1, "RSSMRA00A00A000A");
+//        System.out.println(clientController.getClient("RSSMRA00A00A000A").toString());
 
 
     }

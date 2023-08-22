@@ -46,9 +46,14 @@ public class BookingsController {
         System.out.println("Prenotazione rimossa");
     }
 
-    public Booking[] getAllBookings(int idAdvertiser) {
+    public Booking[] getAllBookingsForAdvertiser(int idAdvertiser) {
         // Get all bookings associated with the given advertiser ID from the database
         return dao.getBookingsByAdvertiser(idAdvertiser);
+    }
+
+    public Booking[] getAllBookings() {
+        // Get all bookings from the database
+        return dao.getBookingAll();
     }
 
     public void modifyDate(Booking booking, LocalDate date) {
