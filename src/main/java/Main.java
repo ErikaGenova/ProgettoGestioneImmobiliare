@@ -112,14 +112,11 @@ public class Main {
         adController.getFavouriteAds("RSSMRA00A00A000A");
 
         adController.deleteAd(10);
-//
-//        adController.payAd(1, "RSSMRA00A00A000A");
-//        clientController.toString();
-//
 
-
-
-
+        Client client = clientController.getClient("RSSMRA00A00A000A");
+        client.toString();
+        adController.payAd(1, "RSSMRA00A00A000A");
+        client.toString();
 
 
     }

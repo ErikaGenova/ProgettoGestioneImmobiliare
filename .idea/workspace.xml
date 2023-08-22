@@ -6,18 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.db" beforeDir="false" afterPath="$PROJECT_DIR$/main.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/PrivateOwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/PrivateOwnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/EstateAgency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/EstateAgency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" afterDir="false" />
     </list>
-    <list id="b11bd91d-7071-4e2b-93b0-4640565388dc" name="Changes by sofia" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" afterDir="false" />
-    </list>
+    <list id="b11bd91d-7071-4e2b-93b0-4640565388dc" name="Changes by sofia" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,21 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java">
-      <ranges>
-        <range start1="14" end1="15" start2="14" end2="14" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
-        <range start1="72" end1="72" start2="71" end2="72" changelist="b11bd91d-7071-4e2b-93b0-4640565388dc" />
-        <range start1="78" end1="78" start2="78" end2="111" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
-        <range start1="79" end1="80" start2="112" end2="113" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
-        <range start1="81" end1="88" start2="114" end2="114" changelist="b11bd91d-7071-4e2b-93b0-4640565388dc" />
-        <range start1="89" end1="99" start2="115" end2="115" changelist="b11bd91d-7071-4e2b-93b0-4640565388dc" />
-        <range start1="101" end1="101" start2="117" end2="125" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
-        <range start1="115" end1="116" start2="139" end2="140" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
-        <range start1="121" end1="122" start2="145" end2="146" changelist="b11bd91d-7071-4e2b-93b0-4640565388dc" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

@@ -44,4 +44,9 @@ public class ClientController implements Observer{
         }
     }
 
+    public Client getClient(String fiscalCode) {
+        // Get the client with the given fiscal code from the database
+        return dao.getClient(fiscalCode);
+    }
+
 }
