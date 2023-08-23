@@ -88,18 +88,18 @@ public class Main {
             System.out.println("\n");
         }
 
-//        estateAgencyController.removeAdvertiser(3);
-//        privateOwnerController.removeAdvertiser(2);
-//        privateOwnerController.removeAdvertiser(5);
-//
-//        allAdvertisers = dao.getAdvertiserAll();
-//        for (Advertiser advertiser : allAdvertisers) {
-//            advertiser.displayInformation();
-//            System.out.println("\n");
-//        }
+        estateAgencyController.removeAdvertiser(3);
+        privateOwnerController.removeAdvertiser(4);
+        privateOwnerController.removeAdvertiser(5);
+
+        allAdvertisers = dao.getAdvertiserAll();
+        for (Advertiser advertiser : allAdvertisers) {
+            advertiser.displayInformation();
+            System.out.println("\n");
+        }
 //
 //        adController.deleteAd(5);
-//        adController.printAllAds();
+        adController.printAllAds();
 //
 //        adController.addToFavourites("RSSMRA00A00A000A", 1);
 //        adController.addToFavourites("RSSMRA00A00A000A", 7);

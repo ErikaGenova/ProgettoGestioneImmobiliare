@@ -26,7 +26,7 @@ public class Ad {
         this.price = price;
         this.sqrmt = sqrmt;
         this.sell = sell;
-        this.advertiserId = advertiserId; //TODO: ogni annuncio ha un inserzionista
+        this.advertiserId = advertiserId;
     }
 
     // Metodi getter
@@ -108,7 +108,7 @@ public class Ad {
                 ", sell=" + sell +
                 ", advertiser=" + advertiserId +
                 '}';
-    } //TODO: aggiustiamo la stampa
+    }
 
 
 }

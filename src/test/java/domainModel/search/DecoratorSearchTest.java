@@ -20,6 +20,10 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class DecoratorSearchTest {
+    AdController adController;
+    ClientController clientController;
+    EstateAgencyController estateAgencyController;
+
     @BeforeAll
     static void initDb() throws SQLException, IOException {
         // Set up database
@@ -34,14 +38,16 @@ public class DecoratorSearchTest {
         DAO dao = new SQLiteDAO();
 
         // Controllers
-        AdController adController = new AdController(dao);
-        ClientController clientController = new ClientController(dao, adController);
-        EstateAgencyController estateAgencyController = new EstateAgencyController(dao);
+        adController = new AdController(dao);
+        clientController = new ClientController(dao, adController);
+        estateAgencyController = new EstateAgencyController(dao);
 
         clientController.addClient("Mario", "Rossi", "RSSMRA00A00A000A", 1000);
         estateAgencyController.addEstateAgency(1, "Agenzia Sole A Catinelle", 100);
-        adController.createAd("Test title", "Test description", "Test address", "Test city", 800, 40,false, 1);
-        adController.createAd("Test title", "Test description", "Test address", "Test city", 500, 400,true, 1);
+        adController.createAd("Test title", "Test description", "Test address", "Test city", 800, 40, false, 1);
+        adController.createAd("Test title", "Test description", "Test address", "Test city", 500, 400, true, 1);
+        adController.createAd("Test title", "Test description", "Test address", "Test city", 200, 50, true, 2);
+        adController.createAd("Test title", "Test description", "Test address", "Test city", 100, 30, false, 2);
 
     }
 
@@ -66,13 +72,14 @@ public class DecoratorSearchTest {
     @Test
     void testSearchAdWithMaxPrice() {
         SearchConcrete baseSearch = new SearchConcrete("Test city");
-        DecoratorSearchPrice search = new DecoratorSearchPrice(baseSearch, 1000);
+        DecoratorSearchPrice search = new DecoratorSearchPrice(baseSearch, 500);
 
         Ad[] ads = search.searchAd();
 
-        assertEquals(2, ads.length);
-        assertEquals(800, ads[0].getPrice());
-        assertEquals(500, ads[1].getPrice());
+        assertEquals(3, ads.length);
+        assertEquals(500, ads[0].getPrice());
+        assertEquals(200, ads[1].getPrice());
+        assertEquals(100, ads[2].getPrice());
     }
 
     @Test
@@ -82,8 +89,9 @@ public class DecoratorSearchTest {
 
         Ad[] ads = search.searchAd();
 
-        assertEquals(1, ads.length);
+        assertEquals(2, ads.length);
         assertEquals(true, ads[0].isSell());
+        assertEquals(true, ads[1].isSell());
     }
 
     @Test
@@ -93,7 +101,25 @@ public class DecoratorSearchTest {
 
         Ad[] ads = search.searchAd();
 
-        assertEquals(1, ads.length);
+        assertEquals(2, ads.length);
         assertEquals(400, ads[0].getSqrmt());
+        assertEquals(50, ads[1].getSqrmt());
+    }
+
+    @Test
+    void testSearchAllFilters() {
+        Ad[] adsSearched = adController.searchAd(new DecoratorSearchPrice(
+                new DecoratorSearchSqrmt(
+                        new DecoratorSearchSell(
+                                new SearchConcrete("Test city"), false
+                        ), 10
+                ), 500));
+        assertEquals(1, adsSearched.length);
+        assertEquals("Test title", adsSearched[0].getTitle());
+        assertEquals(100, adsSearched[0].getPrice());
+        assertEquals(30, adsSearched[0].getSqrmt());
+        assertEquals(false, adsSearched[0].isSell());
+        assertEquals(2, adsSearched[0].getAdvertiserId());
+
     }
 }

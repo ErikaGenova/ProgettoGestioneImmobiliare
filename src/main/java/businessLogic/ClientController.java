@@ -36,6 +36,7 @@ public class ClientController implements Observer{
         System.out.println("Cliente rimosso");
     }
 
+    //Metodo update Observer
     public void update(Ad ad){
         Client[] clients = dao.getFavoritesByAd(ad.getId());
 

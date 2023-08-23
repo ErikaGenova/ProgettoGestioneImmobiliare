@@ -151,7 +151,7 @@ public class SQLiteDAO implements DAO {
     public void deleteAd(Integer idAd) {
         try {
             Ad ad = getAd(idAd);
-            if (ad == null) return; //TODO: perché non mi segna l'errore con il return?
+            if (ad == null) return;
 
             Connection connection = Database.getConnection();
 
@@ -195,6 +195,11 @@ public class SQLiteDAO implements DAO {
         try {
             Connection connection = Database.getConnection();
 
+            // Abilita le foreign keys
+            Statement pragmaStatement = connection.createStatement();
+            pragmaStatement.execute("PRAGMA foreign_keys = ON");
+            pragmaStatement.close();
+
             String deleteQuery = "DELETE FROM advertisers WHERE id = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery);
@@ -216,6 +221,11 @@ public class SQLiteDAO implements DAO {
         try {
             Connection connection = Database.getConnection();
 
+            // Abilita le foreign keys
+            Statement pragmaStatement = connection.createStatement();
+            pragmaStatement.execute("PRAGMA foreign_keys = ON");
+            pragmaStatement.close();
+
             String deleteQuery = "DELETE FROM bookings WHERE id = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery);
@@ -235,6 +245,11 @@ public class SQLiteDAO implements DAO {
     public void deleteFavorite(String fiscalCode, int idAd) {
         try {
             Connection connection = Database.getConnection();
+
+            // Abilita le foreign keys
+            Statement pragmaStatement = connection.createStatement();
+            pragmaStatement.execute("PRAGMA foreign_keys = ON");
+            pragmaStatement.close();
 
             String deleteQuery = "DELETE FROM favorites WHERE id_client = ? AND id_ad = ?";
 
@@ -658,7 +673,6 @@ public class SQLiteDAO implements DAO {
         try {
             Connection connection = Database.getConnection();
 
-            //TODO: controllare query
             String selectQuery = "SELECT clients.* FROM favorites " +
                     "INNER JOIN clients ON favorites.id_client = clients.fiscal_code " +
                     "WHERE id_ad = ?";

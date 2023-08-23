@@ -3,7 +3,7 @@ package businessLogic;
 import dao.DAO;
 import dao.Database;
 import dao.SQLiteDAO;
-import domainModel.Client;
+import domainModel.PrivateOwner;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,8 +15,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
-public class ClientControllerTest {
+public class PrivateOwnerTest {
     DAO dao = new SQLiteDAO();
     AdController adController;
     ClientController clientController;
@@ -41,16 +42,6 @@ public class ClientControllerTest {
         estateAgencyController = new EstateAgencyController(dao);
         privateOwnerController = new PrivateOwnerController(dao);
         bookingsController = new BookingsController(dao);
-
-        clientController.addClient("Mario", "Rossi", "RSSMRA00A00A000A", 1000);
-        clientController.addClient("Marco", "Bianchi", "BNCMRC00A00A000A", 5000);
-        estateAgencyController.addEstateAgency(1, "Agenzia Sole A Catinelle", 100);
-        privateOwnerController.addPrivateOwner(2,"Giuseppe", "Gialli");
-        adController.createAd("Test title", "Test description", "Test address", "Test city", 800, 40,false, 1);
-        adController.createAd("Test title", "Test description", "Test address", "Test city", 500, 400,true, 1);
-        adController.createAd("Test title", "Test description", "Test address", "Test city", 200, 50,true, 2);
-        adController.createAd("Test title", "Test description", "Test address", "Test city", 100, 30,false, 2);
-
     }
 
     private void resetDatabase() throws SQLException {
@@ -70,26 +61,19 @@ public class ClientControllerTest {
         Database.closeConnection(connection);
     }
 
-    //Test che verifichi che il budget venga correttamente aggiornato
     @Test
-    public void updateBudgetClientTest(){
-        clientController.updateClientBudget("RSSMRA00A00A000A", 2000);
-        Client client = clientController.getClient("RSSMRA00A00A000A");
-
-        assertEquals(2000, client.getBudget());
-    }
-
-    //Test che verifichi che un client venga eliminato correttamente
-    @Test
-    public void deleteClientTest(){
-        clientController.addClient("Erika", "Genova", "GNVRKA00A00A000A", 1000);
-        clientController.removeClient("GNVRKA00A00A000A");
-
-        assertEquals(null, clientController.getClient("GNVRKA00A00A000A"));
+    public void removePrivateOwnerTest(){
+        privateOwnerController.addPrivateOwner(1,"Giuseppe", "Gialli");
+        privateOwnerController.removeAdvertiser(1);
+        assertNull(privateOwnerController.getPrivateOwner(1));
     }
 
     @Test
-    public void getNotExistingClientTest(){
-        assertEquals(null, clientController.getClient("AAA"));
+    public void getAllPrivateOwnersTest(){
+        privateOwnerController.addPrivateOwner(1,"Giuseppe", "Gialli");
+        privateOwnerController.addPrivateOwner(2,"Giuseppe", "Gialli");
+        privateOwnerController.addPrivateOwner(3,"Giuseppe", "Gialli");
+        assertEquals(3, privateOwnerController.getAllPrivateOwners().length);
     }
+
 }

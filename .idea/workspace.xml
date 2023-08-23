@@ -7,20 +7,25 @@
     <list default="true" id="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.db" beforeDir="false" afterPath="$PROJECT_DIR$/main.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/BookingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/BookingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/PrivateOwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/PrivateOwnerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Advertiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Advertiser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/businessLogic/BookingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/businessLogic/BookingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/businessLogic/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/businessLogic/ClientControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dao/DAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/DAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/domainModel/search/DecoratorSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domainModel/search/DecoratorSearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
     </list>
-    <list id="b11bd91d-7071-4e2b-93b0-4640565388dc" name="Changes by sofia" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/search/SearchConcrete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/search/SearchConcrete.java" afterDir="false" />
+    <list id="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" name="Changes by sofia" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/BookingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/BookingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,19 +47,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/Main.java">
+    <file path="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java">
       <ranges>
-        <range start1="72" end1="72" start2="72" end2="73" changelist="b11bd91d-7071-4e2b-93b0-4640565388dc" />
-        <range start1="89" end1="119" start2="90" end2="122" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="3" end1="3" start2="3" end2="4" changelist="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" />
+        <range start1="4" end1="4" start2="5" end2="9" changelist="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" />
+        <range start1="17" end1="17" start2="22" end2="39" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java">
+    <file path="$PROJECT_DIR$/src/main/java/domainModel/Ad.java">
       <ranges>
-        <range start1="71" end1="72" start2="71" end2="72" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
-        <range start1="84" end1="85" start2="84" end2="85" changelist="b11bd91d-7071-4e2b-93b0-4640565388dc" />
-        <range start1="88" end1="88" start2="88" end2="91" changelist="b11bd91d-7071-4e2b-93b0-4640565388dc" />
-        <range start1="94" end1="94" start2="97" end2="99" changelist="b11bd91d-7071-4e2b-93b0-4640565388dc" />
-        <range start1="126" end1="127" start2="131" end2="132" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="28" end1="29" start2="28" end2="29" changelist="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" />
+        <range start1="110" end1="111" start2="110" end2="111" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/businessLogic/BookingsController.java">
+      <ranges>
+        <range start1="16" end1="16" start2="16" end2="23" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="21" end1="22" start2="28" end2="29" changelist="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" />
       </ranges>
     </file>
   </component>
@@ -87,18 +96,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.AdControllerTest">
-    <configuration name="AdControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in Progetto gestione immobiliare">
+    <configuration name="All in Progetto gestione immobiliare" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Progetto gestione immobiliare" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="businessLogic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="businessLogic" />
-      <option name="MAIN_CLASS_NAME" value="businessLogic.AdControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,21 +115,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="businessLogic" />
       <option name="MAIN_CLASS_NAME" value="businessLogic.BookingControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClientControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Progetto gestione immobiliare" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="businessLogic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="businessLogic" />
-      <option name="MAIN_CLASS_NAME" value="businessLogic.ClientControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,16 +135,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DecoratorSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EstateAgencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Progetto gestione immobiliare" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="domainModel.search.*" />
+          <option name="PATTERN" value="businessLogic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="domainModel.search" />
-      <option name="MAIN_CLASS_NAME" value="domainModel.search.DecoratorSearchTest" />
+      <option name="PACKAGE_NAME" value="businessLogic" />
+      <option name="MAIN_CLASS_NAME" value="businessLogic.EstateAgencyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrivateOwnerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Progetto gestione immobiliare" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="businessLogic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="businessLogic" />
+      <option name="MAIN_CLASS_NAME" value="businessLogic.PrivateOwnerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdControllerTest" />
-        <item itemvalue="JUnit.ClientControllerTest" />
+        <item itemvalue="JUnit.All in Progetto gestione immobiliare" />
         <item itemvalue="JUnit.BookingControllerTest" />
         <item itemvalue="JUnit.DAOTest" />
-        <item itemvalue="JUnit.DecoratorSearchTest" />
+        <item itemvalue="JUnit.EstateAgencyTest" />
+        <item itemvalue="JUnit.PrivateOwnerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -194,5 +196,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

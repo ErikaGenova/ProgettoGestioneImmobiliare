@@ -29,7 +29,7 @@ public class AdController implements Subject {
                     existingAd.getPrice() == ad.getPrice() &&
                     existingAd.getSqrmt() == ad.getSqrmt() &&
                     existingAd.getAdvertiserId() == ad.getAdvertiserId()) {
-                return true; // Se esiste un annuncio con gli stessi attributi, restituisci false
+                return true; // Se esiste un annuncio con gli stessi attributi, restituisci true
             }
         }
 
@@ -157,7 +157,6 @@ public class AdController implements Subject {
 
     public void removeObserver(Observer observer) {
         observers.remove(observer);
-        //TODO:Come si gestisce la rimozione del clientController dalla lista degli osservatori
     }
 
     public void notifyObservers(Ad ad) {

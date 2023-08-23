@@ -111,4 +111,13 @@ public class BookingControllerTest {
         assertEquals(LocalDate.parse("2023-11-24"), bookings[0].getDate());
     }
 
+    @Test
+    public void invalidBookingDateOrTime() throws Exception {
+        LocalDate booking1= LocalDate.parse("1996-07-27");
+        LocalTime time1= LocalTime.parse("15:00");
+
+        Booking testBooking = bookingsController.createBooking(booking1, time1, 1, "RSSMRA00A00A000A");
+        assertNull(testBooking);
+    }
+
 }

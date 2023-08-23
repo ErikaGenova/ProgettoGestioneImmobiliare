@@ -14,12 +14,19 @@ public class BookingsController {
     }
 
     public boolean checkAvailability(Booking booking) {
+        LocalDate currentDate = LocalDate.now();
+        LocalTime currentTime = LocalTime.now();
+
+        if (booking.getDate().isBefore(currentDate) || (booking.getDate().isEqual(currentDate) && booking.getTime().isBefore(currentTime))) {
+            System.out.println("La data o l'ora dell'appuntamento sono precedenti a quelli attuali");
+            return false;
+        }
         Booking[] allBookings = dao.getBookingAll(); // Assume che dao.getBookingAll() restituisca tutte le prenotazioni dal database
 
         for (Booking existingBooking : allBookings) {
             if (existingBooking.getDate().equals(booking.getDate()) &&
                     existingBooking.getTime().equals(booking.getTime()) &&
-                    existingBooking.getAdId() == booking.getAdId()) {
+                    existingBooking.getAdId() == booking.getAdId() ) {
                 return false; // Prenotazione già esistente per la stessa data, orario e annuncio
             }
         }

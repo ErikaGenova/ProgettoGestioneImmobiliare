@@ -25,5 +25,5 @@ public abstract class Advertiser {
         this.bankAccount = bankAccount;
     }
 
-    public abstract void displayInformation(); //TODO: da verificare se serve
+    public abstract void displayInformation();
 }
