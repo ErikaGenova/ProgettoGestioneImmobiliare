@@ -17,21 +17,18 @@ public class ClientController implements Observer{
     }
 
     public void addClient(String name, String lastName, String fiscalCode, int budget) {
-        // Check if the client already exists
+        // controllo se il cliente esiste già
         Client client = dao.getClient(fiscalCode);
         if (client != null) {
             throw new IllegalArgumentException("Il cliente esiste già");
         } else {
-            // Create a new Client instance
             Client newClient = new Client(fiscalCode, name, lastName, budget);
-            // Insert the new client into the database
             dao.insertClient(newClient);
         }
 
     }
 
     public void removeClient(String fiscalCode) {
-        // Delete the client with the given fiscal code from the database
         dao.deleteClient(fiscalCode);
         System.out.println("Cliente rimosso");
     }
@@ -46,16 +43,13 @@ public class ClientController implements Observer{
     }
 
     public void updateClientBudget(String fiscalCode, int newBudget) {
-        // Get the client with the given fiscal code from the database
+        // prendi il cliente dal database con il codice fiscale dato
         Client client = dao.getClient(fiscalCode);
-        // Update the client's budget
         client.setBudget(newBudget);
-        // Update the client in the database
         dao.updateClient(client, newBudget);
     }
 
     public Client getClient(String fiscalCode) {
-        // Get the client with the given fiscal code from the database
         return dao.getClient(fiscalCode);
     }
 

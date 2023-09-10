@@ -6,26 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.db" beforeDir="false" afterPath="$PROJECT_DIR$/main.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/AdvertiserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/AdvertiserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/BookingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/BookingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/PrivateOwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/PrivateOwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Advertiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Advertiser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/businessLogic/BookingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/businessLogic/BookingControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/businessLogic/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/businessLogic/ClientControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dao/DAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/DAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/domainModel/search/DecoratorSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domainModel/search/DecoratorSearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
     </list>
     <list id="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" name="Changes by sofia" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/BookingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/BookingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainModel/Ad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,23 +39,57 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/businessLogic/EstateAgencyController.java">
+    <file path="$PROJECT_DIR$/src/main/java/dao/SQLiteDAO.java">
       <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" />
-        <range start1="4" end1="4" start2="5" end2="9" changelist="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" />
-        <range start1="17" end1="17" start2="22" end2="39" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="41" end1="42" start2="41" end2="41" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="65" end1="66" start2="64" end2="64" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="81" end1="82" start2="79" end2="80" changelist="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" />
+        <range start1="100" end1="101" start2="98" end2="98" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="113" end1="115" start2="110" end2="112" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="124" end1="125" start2="121" end2="121" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="145" end1="146" start2="141" end2="141" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="168" end1="169" start2="163" end2="163" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="188" end1="189" start2="182" end2="182" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="214" end1="215" start2="207" end2="207" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="239" end1="240" start2="231" end2="231" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="265" end1="266" start2="256" end2="256" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="286" end1="287" start2="276" end2="276" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="307" end1="308" start2="296" end2="296" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="328" end1="329" start2="316" end2="316" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="349" end1="350" start2="336" end2="336" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="370" end1="371" start2="356" end2="356" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="409" end1="410" start2="394" end2="394" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="444" end1="445" start2="428" end2="428" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="483" end1="484" start2="466" end2="466" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="518" end1="519" start2="500" end2="500" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="547" end1="548" start2="528" end2="528" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="575" end1="576" start2="555" end2="555" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="603" end1="604" start2="582" end2="582" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="631" end1="632" start2="609" end2="609" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="662" end1="663" start2="639" end2="639" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="729" end1="730" start2="705" end2="705" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="758" end1="759" start2="733" end2="733" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/main/java/domainModel/Ad.java">
+    <file path="$PROJECT_DIR$/src/main/java/businessLogic/AdController.java">
       <ranges>
-        <range start1="28" end1="29" start2="28" end2="29" changelist="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" />
-        <range start1="110" end1="111" start2="110" end2="111" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/businessLogic/BookingsController.java">
-      <ranges>
-        <range start1="16" end1="16" start2="16" end2="23" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
-        <range start1="21" end1="22" start2="28" end2="29" changelist="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" />
+        <range start1="20" end1="22" start2="20" end2="21" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="44" end1="45" start2="43" end2="44" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="57" end1="58" start2="56" end2="57" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="65" end1="66" start2="64" end2="65" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="73" end1="74" start2="72" end2="72" changelist="7c33f2cb-fd1e-4c7a-97b2-5e339a69ef9f" />
+        <range start1="81" end1="81" start2="79" end2="80" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="82" end1="83" start2="81" end2="82" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="90" end1="91" start2="89" end2="89" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="97" end1="100" start2="95" end2="96" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="103" end1="104" start2="99" end2="100" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="105" end1="106" start2="101" end2="102" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="108" end1="109" start2="104" end2="104" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="115" end1="119" start2="110" end2="110" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="132" end1="133" start2="123" end2="123" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="137" end1="138" start2="127" end2="127" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="142" end1="143" start2="131" end2="131" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
+        <range start1="148" end1="149" start2="136" end2="136" changelist="c2cdddbf-0103-4d50-9558-26bdc2bcbaf4" />
       </ranges>
     </file>
   </component>
@@ -93,7 +119,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RunManager" selected="JUnit.All in Progetto gestione immobiliare">

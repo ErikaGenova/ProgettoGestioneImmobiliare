@@ -11,7 +11,6 @@ public abstract class AdvertiserController<T extends Advertiser> {
     }
 
     public void removeAdvertiser(int id) {
-        // Remove the advertiser with the given ID from the database
         dao.deleteAdvertiser(id);
     }
 }

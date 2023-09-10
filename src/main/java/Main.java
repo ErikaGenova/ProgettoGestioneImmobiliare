@@ -24,19 +24,19 @@ public class Main {
         // DAOs
         DAO dao = new SQLiteDAO();
 
-        // Controllers
+        // Controller
         AdController adController = new AdController(dao);
         ClientController clientController = new ClientController(dao, adController);
         EstateAgencyController estateAgencyController = new EstateAgencyController(dao);
         PrivateOwnerController privateOwnerController = new PrivateOwnerController(dao);
         BookingsController bookingsController = new BookingsController(dao);
 
-        // Add sample clients
+        // Client di prova
         clientController.addClient("Mario", "Rossi", "RSSMRA00A00A000A", 1000);
         clientController.addClient("Luigi", "Verdi", "VRDLGI00A00A000A", 5000);
         clientController.addClient("Giovanni", "Bianchi", "GVNNBN00A00A000A", 200);
 
-        // Add sample estate agencies and private owners
+        // Advertiser di prova
         estateAgencyController.addEstateAgency(1, "Agenzia Sole A Catinelle", 100);
         privateOwnerController.addPrivateOwner(2, "Federico", "Rosa");
         privateOwnerController.addPrivateOwner(3, "Giacomo", "Poretti");
@@ -44,7 +44,7 @@ public class Main {
         privateOwnerController.addPrivateOwner(5, "Aldo", "Baglio");
         estateAgencyController.addEstateAgency(6, "Agenzia ComproCasa", 500);
 
-        // Add sample ads
+        // Annunci di prova
         adController.createAd("Appartamento in centro", "Bilocale secondo piano", "Via Roma 1", "Firenze", 800, 40,false, 1);
         adController.createAd("Villa con piscina", "Villa con piscina e giardino", "Via del corso 2", "Roma", 200000, 200, true, 2);
         adController.createAd("Appartamento in periferia", "Bilocale piano terra", "Via aretina 3", "Arezzo", 600, 50, false, 3);

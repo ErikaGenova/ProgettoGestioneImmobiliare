@@ -39,7 +39,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -63,7 +62,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -79,7 +77,7 @@ public class SQLiteDAO implements DAO {
             preparedStatement.setInt(1, advertiser.getId());
             preparedStatement.setInt(2, advertiser.getBankAccount());
 
-            // Check the type of advertiser and set the appropriate fields
+            // controllo se l'inserzionista è un'agenzia o un privato
             if (advertiser instanceof EstateAgency) {
                 preparedStatement.setString(3, ((EstateAgency) advertiser).getName());
                 preparedStatement.setInt(4, ((EstateAgency) advertiser).getAgencyFee());
@@ -98,7 +96,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -111,8 +108,8 @@ public class SQLiteDAO implements DAO {
                     "VALUES (?, ?, ?, ?)";
 
             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
-            preparedStatement.setObject(1, java.sql.Date.valueOf(booking.getDate())); // Convert LocalDate to java.sql.Date
-            preparedStatement.setObject(2, java.sql.Time.valueOf(booking.getTime())); // Convert LocalTime to java.sql.Time
+            preparedStatement.setObject(1, java.sql.Date.valueOf(booking.getDate())); // convertire LocalDate in java.sql.Date
+            preparedStatement.setObject(2, java.sql.Time.valueOf(booking.getTime())); // convertire LocalTime in java.sql.Time
             preparedStatement.setInt(3, booking.getAdId());
             preparedStatement.setString(4, booking.getClientId());
 
@@ -122,7 +119,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -143,7 +139,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -166,7 +161,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -186,7 +180,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -212,7 +205,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -237,7 +229,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -263,7 +254,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -284,7 +274,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -305,7 +294,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -326,7 +314,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -347,7 +334,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -368,7 +354,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
     }
 
@@ -407,7 +392,6 @@ public class SQLiteDAO implements DAO {
         } catch (
                 SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
 
         return null;
@@ -442,7 +426,6 @@ public class SQLiteDAO implements DAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
 
         return null;
@@ -481,7 +464,6 @@ public class SQLiteDAO implements DAO {
             return advertiser;
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
 
         return null;
@@ -516,7 +498,6 @@ public class SQLiteDAO implements DAO {
             return booking;
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
 
         return null;
@@ -545,7 +526,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
 
         return adList.toArray(new Ad[0]);
@@ -573,7 +553,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
 
         return clientList.toArray(new Client[0]);
@@ -601,7 +580,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
 
         return advertiserList.toArray(new Advertiser[0]);
@@ -629,7 +607,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
 
         return bookingList.toArray(new Booking[0]);
@@ -660,7 +637,6 @@ public class SQLiteDAO implements DAO {
             Database.closeConnection(connection);
         } catch (SQLException e) {
             e.printStackTrace();
-            // Gestione dell'eccezione, log, o altra logica necessaria
         }
 
         return favoriteAdList.toArray(new Ad[0]);
@@ -727,7 +703,6 @@ public class SQLiteDAO implements DAO {
 
     @Override
     public Booking[] getBookingsByAd(int idAd) {
-        //get bookings by ad
         List<Booking> bookingList = new ArrayList<>();
 
         try {
@@ -756,7 +731,6 @@ public class SQLiteDAO implements DAO {
 
     @Override
     public Booking[] getBookingsByAdvertiser(int idAdvertiser) {
-        //get bookings by advertiser
         List<Booking> bookingList = new ArrayList<>();
         try {
             Connection connection = Database.getConnection();

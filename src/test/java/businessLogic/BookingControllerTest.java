@@ -78,9 +78,10 @@ public class BookingControllerTest {
     public void checkOverlapBookingTest() throws Exception {
         LocalDate booking1= LocalDate.parse("2023-09-12");
         LocalTime time1= LocalTime.parse("15:00");
+        LocalTime time2 = LocalTime.parse("15:10");
 
         bookingsController.createBooking(booking1, time1, 1, "RSSMRA00A00A000A");
-        Booking overlap = bookingsController.createBooking(booking1, time1, 1, "BNCMRC00A00A000A");
+        Booking overlap = bookingsController.createBooking(booking1, time2, 1, "BNCMRC00A00A000A");
 
         assertNull(overlap);
     }
